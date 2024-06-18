@@ -1,0 +1,9 @@
+@startuml
+participant Customer
+participant Cashier
+participant TicketSystem
+Customer -> TicketSystem: Request Buy Ticket
+TicketSystem -> Cashier: Request Ticket Purchase
+Cashier -> TicketSystem: Process Payment
+TicketSystem -> Customer: Provide Ticket
+@enduml
