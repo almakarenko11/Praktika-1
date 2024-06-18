@@ -1,0 +1,32 @@
+@startuml
+package TicketSellingSystem {
+  class Ticket {
+    -ticketNumber: int
+    -match: Match
+    +getTicketNumber(): int
+  }
+
+  class Match {
+    -matchId: int
+    -stadium: Stadium
+    +getMatchId(): int
+  }
+
+  class Stadium {
+    -stadiumName: string
+    -seats: int
+    -ticketPrice: double
+    +getStadiumName(): string
+  }
+
+  class SeasonPass {
+    -passNumber: int
+    -matches: Match[*]
+    +getPassNumber(): int
+  }
+
+  Ticket -- Match
+  Match -- Stadium
+  SeasonPass -- Match
+}
+@enduml
