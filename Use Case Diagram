@@ -1,0 +1,19 @@
+@startuml
+left to right direction
+actor Customer as Customer
+actor Cashier as Cashier
+rectangle TicketSellingSystem {
+  usecase "Buy Ticket" as BuyTicket
+  usecase "Return Ticket" as ReturnTicket
+  usecase "Buy Season Pass" as BuySeasonPass
+  usecase "Return Season Pass" as ReturnSeasonPass
+  Cashier -- (BuyTicket)
+  Cashier -- (ReturnTicket)
+  Cashier -- (BuySeasonPass)
+  Cashier -- (ReturnSeasonPass)
+  Customer -- (BuyTicket)
+  Customer -- (ReturnTicket)
+  Customer -- (BuySeasonPass)
+  Customer -- (ReturnSeasonPass)
+}
+@enduml
